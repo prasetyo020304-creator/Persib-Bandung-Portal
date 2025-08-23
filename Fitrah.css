@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;900&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    margin: 0;
+    background: radial-gradient(ellipse at top, #1246a6 0%, #c60c30 100%);
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.stadium-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(ellipse at center, #0a1642 0%, #c60c30 100%),
+      url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    background-size: cover;
+    opacity: 0.35;
+    filter: blur(3.5px);
+}
+
+header {
+    background: #181c35;
+    border-bottom: 5px solid #c60c30;
+    box-shadow: 0 4px 32px #1246a677;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 38px;
+    height: 58px;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 24px;
+    filter: drop-shadow(0 0 8px #ffd700);
+}
+
+nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    font-size: 1.08rem;
+    cursor: pointer;
+    color: #ffd700;
+    transition: color 0.2s;
+}
+nav li:hover {
+    color: #f4c800;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 40px 0 30px 0;
+}
+
+.profile-card {
+    display: flex;
+    background: linear-gradient(120deg, #181c35 55%, #1246a6 100%);
+    border-radius: 38px;
+    box-shadow: 0 8px 40px #000a, 0 1px 24px #1246a6a1;
+    border: 2px solid #ffd70033;
+    max-width: 1100px;
+    width: 100%;
+    padding: 34px 48px;
+    gap: 38px;
+    position: relative;
+    animation: fadeCard .8s cubic-bezier(.31,.83,.58,.93);
+}
+
+@keyframes fadeCard {
+    from { transform: scale(.92) translateY(36px); opacity: 0; }
+    to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.profile-left {
+    flex: 0 0 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+}
+
+.player-photo-bg {
+    width: 190px;
+    height: 240px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 0 30px #1246a6cc, 0 2px 22px #c60c30a8;
+    background: linear-gradient(135deg,#1246a6 0%,#c60c30 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.player-photo {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 4px solid #ffd700;
+}
+
+.player-rating {
+    background: #ffd700cc;
+    color: #181c35;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px #1246a6cc;
+    padding: 16px 22px;
+    text-align: center;
+    min-width: 120px;
+}
+.rating-big {
+    font-size: 2.7rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    display: block;
+}
+.rating-label {
+    font-size: 1.09rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.rating-role {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #1246a6;
+    margin-top: 3px;
+    letter-spacing: 1px;
+}
+
+.club-info {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 6px;
+    background: #1246a6cc;
+    border-radius: 12px;
+    padding: 5px 16px;
+    color: #ffd700;
+    font-weight: 700;
+    box-shadow: 0 2px 8px #c60c30a7;
+    font-size: 1.13rem;
+}
+.club-info img {
+    height: 28px;
+    filter: drop-shadow(0 0 7px #ffd700);
+}
+
+.flag-country {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 7px;
+    background: #c60c30cc;
+    border-radius: 12px;
+    padding: 4px 13px;
+    color: #ffd700;
+    font-weight: 700;
+    box-shadow: 0 2px 8px #1246a6a7;
+    font-size: 1.08rem;
+}
+.flag-country img {
+    height: 28px;
+    margin-right: 4px;
+    filter: drop-shadow(0 0 8px #ffd700);
+}
+
+.profile-right {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.profile-right h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #ffd700;
+    margin-bottom: 2px;
+    letter-spacing: 1.5px;
+    text-shadow: 0 1px 12px #1246a6;
+}
+
+.key-info {
+    list-style: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 1.06rem;
+}
+.key-info li {
+    margin-bottom: 6px;
+    color: #fff;
+    font-weight: 500;
+}
+.key-info strong {
+    color: #ffd700;
+    font-weight: 700;
+}
+
+.career-section, .stats-section, .achievement-section, .bio-section {
+    background: #1246a6cc;
+    border-radius: 16px;
+    padding: 17px 24px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 10px #c60c3055;
+}
+.career-section h2,
+.stats-section h2,
+.achievement-section h2,
+.bio-section h2 {
+    color: #ffd700;
+    font-size: 1.13rem;
+    font-weight: 800;
+    margin-bottom: 7px;
+    letter-spacing: 1.2px;
+}
+
+.career-section ul,
+.achievement-section ul {
+    padding-left: 22px;
+    margin: 0 0 5px 0;
+    color: #fff;
+    font-size: 1.05rem;
+}
+.injury-section {
+    background: #0458b9cc;
+    border-radius: 16px;
+    padding: 17px 24px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 10px #1246a655;
+}
+
+.injury-section h2 {
+    color: #ffd700;
+    font-size: 1.13rem;
+    font-weight: 800;
+    margin-bottom: 7px;
+    letter-spacing: 1.2px;
+    text-shadow: 0 1px 8px #181c35;
+}
+
+.injury-section ul {
+    padding-left: 22px;
+    margin: 0 0 5px 0;
+    color: #fff;
+    font-size: 1.05rem;
+}
+
+.injury-section ul li {
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+    margin-top: 8px;
+}
+.stat-box {
+    background: #181c35e0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #ffd70060;
+    text-align: center;
+    padding: 12px 20px;
+    min-width: 100px;
+    color: #ffd700;
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    margin-bottom: 7px;
+    font-size: 1.01rem;
+}
+.stat-value {
+    font-size: 1.3rem;
+    font-weight: 900;
+    display: block;
+}
+.stat-label {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #ffd700bb;
+}
+
+.bio-section p {
+    margin: 0;
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+footer {
+    background: #181c35d0;
+    color: #ffd700;
+    text-align: center;
+    padding: 19px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    margin-top: 40px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-shadow: 0 -2px 12px #1246a6a4;
+}
+
+@media (max-width: 1000px) {
+    .profile-card {
+        flex-direction: column;
+        align-items: center;
+        padding: 28px 10vw;
+        gap: 16px;
+    }
+    .profile-left, .profile-right {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-card {
+        padding: 12px 1vw;
+    }
+    .player-photo-bg {
+        width: 140px;
+        height: 170px;
+    }
+    .profile-right h1 {
+        font-size: 1.45rem;
+    }
+    .career-section, .stats-section, .achievement-section, .bio-section {
+        padding: 10px 7px;
+    }
+    .stats-grid {
+        gap: 8px;
+    }
+}
